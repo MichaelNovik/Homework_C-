@@ -1,0 +1,190 @@
+﻿// Задачи 2 семинара.
+
+// Задача 1. Написать программу, которая выбирает случайное число из диапазона [10,99] и выводит большее из этих чисел.
+
+// void ShowNumber(){
+//     int num = new Random().Next (10, 100);
+//     int firstNum = num/10;
+//     int secondNum = num%10;
+//     Console.Write(num + " -> ");
+//     if (firstNum > secondNum){
+//         Console.WriteLine(firstNum);
+//     }
+//     else{
+//         Console.WriteLine(secondNum);
+//     }
+// }
+// ShowNumber();
+
+// Задача 2. Написать программу, которая выводит случайное трехзначное число и удаляет вторую цифру этого числа.
+
+// Варинт 1.
+// void ShowNumber (){
+//     int num = new Random(). Next (100, 1000);
+//     int firstNum = num/100;
+//     int secondNum = (num/100)%10;
+//     int thirdNum = num%10;
+//     Console.WriteLine(num + " -> " + firstNum+thirdNum);
+// }
+// ShowNumber();
+
+// Вариант 2. (семинар)
+// int NumberWithoutSecDig(int Number){
+//     int NewNumber = Number / 100 * 10 + Number % 10;
+//     return NewNumber;
+// }
+// int Number = new Random().Next(100,1000);
+// int a = NumberWithoutSecDig(Number);
+// Console.WriteLine(a + " " + Number);
+
+// Задачи 3. Написать программу, которая будет принимать на вход два числа и выводить, является ли второе число кратным первому. Если число 2 не кратно числу 1, то программа выводит остаток от деления.
+
+// Вариант 1. 
+// Console.Write("input Number1: ");
+// int num1 = Convert.ToInt32(Console.ReadLine());
+// Console.Write("input Number2: ");
+// int num2 = Convert.ToInt32 (Console.ReadLine());
+// if (num1%num2 == 0){
+//     Console.WriteLine("Кратно");
+// }
+// else {
+//     Console.WriteLine("не кратно, остаток " + num1%num2);
+// }
+
+// Вариант 2. (Через Функцию. Семинарский)
+// void MultiNum(int a, int b){
+//     if (a%b == 0){
+//         Console.WriteLine(b + " кратно " + a);
+//     }else{
+//         Console.WriteLine(b + " не кратно " + a + ", остаток " + a%b);
+//     }
+// }
+
+// Console.WriteLine("Введите последовательно два числа: ");
+// int num1 = Convert.ToInt32(Console.ReadLine());
+// int num2 = Convert.ToInt32(Console.ReadLine());
+
+// MultiNum(num1,num2);
+
+// Задача 4. Написать программу, которая принимает на вход число и проверяет, кратно ли оно одновременно 7 и 23.
+
+// Вариант 1.
+// Console.Write("input N: ");
+// int num = Convert.ToInt32(Console.ReadLine());
+// if (num % 7 == 0 & num % 23 == 0){
+//     Console.WriteLine("да");
+// }
+// else {
+//     Console.WriteLine("нет");
+// }
+
+// Вариант 2. (Через Функцию. Семина.)
+// void NumDiv(int a){
+//     if (a%7 == 0 & a%23 == 0){
+//         Console.WriteLine(a + " кратно 23 и 7");
+//     }else{
+//         Console.WriteLine(a + " не кратно 23 и 7");
+//     }
+// }
+
+// Console.WriteLine("Введите число: ");
+// NumDiv(Convert.ToInt32(Console.ReadLine()));
+
+// Задача 5. Написать программу, которая принимает на вход два числа и проверяет, является ли одно число квадратом другого.
+
+// Console.Write("input Number1: ");
+// int num1 = Convert.ToInt32(Console.ReadLine());
+// Console.Write("input Number2: ");
+// int num2 = Convert.ToInt32(Console.ReadLine());
+// if (Math.Pow(num1, 2) == num2 | Math.Pow(num2, 2) == num1){
+//     Console.WriteLine("да");
+// }
+// else {
+//     Console.WriteLine("нет");
+// }
+
+
+
+
+// ДОМАШНЯЯ РАБОТА
+
+// Задача 1. Написать программу, которая принимает на вход трехзначное число и на выходе показываает вторую цифру этого числа.
+
+// Вариант 1. (Как программа)
+// Console.Write("введите трехзначное число N: ");
+// int num = Convert.ToInt32(Console.ReadLine());
+// if (num>99 & num<1000){
+//     int firstNum = num / 100;
+//     int secondNum = (num / 10) % 10;
+//     int thirdNum = num % 10;
+//     Console.WriteLine(num + " -> " + secondNum);
+// }
+// else{
+//      Console.WriteLine("Вы ввели не трехзначное число!");
+// }
+
+// Вариант 2. (Через Метод)
+// void NuberOnlyWithSecDig(int a){
+//     if (a>99 & a<1000){
+//         int b = a/100;
+//         int c = (a/10)%10;
+//         int d = a%10;
+//         Console.WriteLine(c);
+//     }
+//     else{
+//         Console.WriteLine("Вы ввели не трехзначное число!");
+//     }
+// }
+
+// Console.WriteLine("input N: ");
+// NuberOnlyWithSecDig(Convert.ToInt32(Console.ReadLine()));
+
+
+// Задача 2. Написать программу, которая выводит третью цифру заданного числа или сообщает, что третьей цифры нет.
+
+// Варинт 1.
+// Console.Write("input N: ");
+// int num = Convert.ToInt32(Console.ReadLine());
+// while (num>999){
+//     num = num/10;
+// }
+// if (num>99 & num<1000){
+//     Console.WriteLine(num%10);
+// }
+// else{
+//     Console.WriteLine("Третьей цифры нет");
+// }
+
+// Вариант 2. (Через Функцию)
+// void Num(int a){
+//     while (a>999){
+//         a = a/10;
+//     }
+//     if (a>99 & a<1000){
+//     Console.WriteLine(a%10);
+//     }
+//     else{
+//         Console.WriteLine("Третьей цифры нет");
+//     }
+// }
+
+// Console.WriteLine("Введите число: ");
+// Num(Convert.ToInt32(Console.ReadLine()));
+
+// Задача 3. Написать программу, которая принимает на вход цифру, обозначающую день недели, и проверяет, является ли этот день выходным.
+
+void NumberDay(int a){
+    if (a>=1 & a<6){
+        Console.WriteLine("Это будний день");
+    }
+    else if (a==6 | a==7)
+    {
+        Console.WriteLine("Это выходной день");
+    }
+    else{
+        Console.WriteLine("Вы ввели число не относящееся к диапазону [1;7]");
+    }
+}
+
+Console.Write("Введите цифру обозначающую день недели (от 1 до 7): ");
+NumberDay(Convert.ToInt32(Console.ReadLine()));
